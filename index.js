@@ -116,6 +116,31 @@ function oyun(oyuncu, bilgisayar){
   }
 }
 
+// Alternative Solution
+// function oyun(oyuncu,bilgisayar){
+//   switch(oyuncu){
+//     case "Taş":
+//       return bilgisayar ==="Makas" 
+//       ? "Kazandın!"
+//       : bilgisayar ==="Kağıt"
+//       ? "Kaybettin!"
+//       : "Beraberlik"
+//     case "Kağıt":
+//       return bilgisayar === "Taş"
+//       ? "Kazandın!"
+//       : bilgisayar ==="Makas"
+//       ? "Kaybettin!"
+//       : "Beraberlik"
+//     case "Makas":
+//       return bilgisayar === "Kağıt"
+//       ? "Kazandın!"
+//       : bilgisayar ==="Taş"
+//       ? "Kaybettin!"
+//       : "Beraberlik"
+//   }
+// }
+
+
 // Şimdi Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
 /*
 Öncelikle aşağıdakileri yapın:
@@ -133,7 +158,7 @@ function oyun(oyuncu, bilgisayar){
 */
 function bilgisayarinSecimi() {
    let secimArray = ["Taş", "Kağıt", "Makas"]
-   let randomSecim = secimArray[Math.ceil(Math.random()*3)]
+   let randomSecim = secimArray[Math.ceil(Math.random()*2)]
    return randomSecim
 }
 console.log(oyun("Makas",bilgisayarinSecimi()))
